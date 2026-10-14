@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+            sum += arr[i];
+        }
+        double average = (double) sum / n;
+       System.out.println("Сумма: " + sum);
+        System.out.printf(Locale.US, "Среднее: %.1f\n", average);
+    }
+}

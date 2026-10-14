@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int n = scanner.nextInt();
+        
+        int posCount = 0;
+        int negCount = 0;
+        int zeroCount = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int num = scanner.nextInt();
+            if (num > 0) {
+                posCount++;
+            } else if (num < 0) {
+                negCount++;
+            } else {
+                zeroCount++;
+            }
+        }
+        
+        System.out.println("Положительных: " + posCount);
+        System.out.println("Отрицательных: " + negCount);
+        System.out.println("Нулей: " + zeroCount);
+    }
+}
